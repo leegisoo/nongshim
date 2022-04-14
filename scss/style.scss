@@ -1,0 +1,1615 @@
+@charset "UTF_8";
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Gowun+Batang&family=Gugi&family=Nanum+Pen+Script&display=swap');
+
+#wrap {
+	margin: 0 auto;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+
+	//헤더 영역//
+	header {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		padding-bottom: 10px;
+		position: fixed;
+		background-color: #fff;
+		border-bottom: 1px solid rgba(51, 51, 51, 0.442);
+		z-index: 9999;
+
+		.logo {
+			width: 200px;
+			height: 80px;
+			background-image: url(/img/농심로고.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		.menu {
+			width: 50%;
+			height: 100%;
+			display: flex;
+			transition: 1s;
+
+			&:hover {
+				height: 100%;
+			}
+
+			&:hover ul {
+				display: block;
+			}
+
+			li {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				position: relative;
+				bottom: 0;
+				text-align: center;
+
+				a {
+					width: 100%;
+					padding: 28px 0;
+					font: bold 20px/1 "nanum gothic";
+					color: #000;
+				}
+
+				span {
+					position: absolute;
+					display: block;
+					width: 7px;
+					height: 7px;
+					margin-top: 7px;
+					border-radius: 50%;
+					opacity: 0;
+					transition: 0.3s;
+				}
+
+				.s1 {
+					background-color: red;
+					top: 15px;
+					right: 67px;
+				}
+
+				.s2 {
+					background-color: rgb(255, 132, 0);
+					top: 15px;
+					right: 30px;
+				}
+
+				.s3 {
+					background-color: rgb(14, 199, 14);
+					top: 15px;
+					right: 58px;
+				}
+
+				.s4 {
+					background-color: rgb(33, 60, 236);
+					top: 15px;
+					right: 49px;
+				}
+
+				.s5 {
+					background-color: #333;
+					top: 15px;
+					right: 49px;
+				}
+
+				ul {
+					position: relative;
+					display: none;
+					width: 100%;
+
+					li {
+						display: block;
+						padding: 30px;
+						height: 50px;
+
+						a {
+							display: inline;
+							padding: 0;
+							font: bold 17px/1 "nanum gothic";
+							position: relative;
+							color: rgb(140, 139, 139);
+
+
+							&:hover {
+								color: #333;
+
+								&::after {
+									width: 100%;
+									left: 0;
+								}
+							}
+
+							&::after {
+								content: "";
+								position: absolute;
+								width: 0;
+								bottom: -7px;
+								left: 50%;
+								height: 2px;
+								background: rgb(218, 42, 42);
+								transition: all 0.5s;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.sns {
+			width: 10%;
+			height: 80px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			font: bold 25px/1 "arial";
+
+			a {
+				color: #333;
+			}
+		}
+	}
+	//헤더 영역 end//
+
+	//섹션영역//
+	section {
+		margin-top: 90px;
+		width: 100%;
+
+		//이벤트 스와이퍼영역//
+		.swiper {
+			width: 100vw;
+			height: 88vh;
+
+			.swiper-wrapper {
+
+				.swiper-slide {
+
+					div {
+						width: 100%;
+						height: 100%;
+					}
+
+					.slide1 {
+						background-image: url(/img/배홍동.jpg);
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						position: relative;
+
+						p {
+							font: 50px/1 "Nanum Pen Script";
+							color: #fff;
+							position: absolute;
+							left: 150px;
+							top: 250px;
+
+							span {
+								font: bold 80px/1.5 "Nanum Pen Script"
+							}
+						}
+					}
+
+					.slide2 {
+						background-image: url(/img/비건.jpg);
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						position: relative;
+
+						.s2text {
+							position: absolute;
+							left: 70px;
+							top: 60%;
+							color: #fff;
+
+							h1 {
+								font: bold 50px/1.5 "arial";
+							}
+
+							p {
+								margin-top: 30px;
+								font: bold 20px/1.5 "nanum gothic";
+							}
+						}
+					}
+
+					.slide3 {
+						background-image: url(/img/짜파게티.jpg);
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						position: relative;
+
+						.up {
+							position: absolute;
+							left: 5%;
+							top: 3%;
+							font: bold 150px/1 'arial';
+							color: #e5e0da;
+						}
+
+						.down {
+							position: absolute;
+							right: 5%;
+							bottom: 3%;
+							font: bold 150px/1 'arial';
+							color: #e84354;
+						}
+
+						p {
+							position: absolute;
+							bottom: 3%;
+							left: 3%;
+							font: 55px/1.5 'Black Han Sans';
+							color: #eee;
+						}
+					}
+
+					.slide4 {
+						background-image: url(/img/콜라겐.jpg);
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						position: relative;
+
+						h1 {
+							left: 5%;
+							top: 15%;
+							position: absolute;
+							font: bold 60px/1.5 "arial";
+							color: #fff;
+						}
+					}
+				}
+			}
+
+			.swiper-pagination-bullet-active {
+				background-color: #fff;
+				transform: scale(1.5);
+			}
+		}
+		//이벤트 스와이퍼영역 end//
+
+		// 농심소식 영역//
+		.news {
+			width: 100%;
+			padding-top: 80px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			box-sizing: border-box;
+
+			.newsh {
+				font: bold 70px/1 "nanum gothic";
+				color: #000;
+				opacity: 0;
+				position: relative;
+				bottom: -100px;
+				transition: 1s;
+
+				&.on {
+					opacity: 1;
+					bottom: 0;
+				}
+			}
+
+			.newscard {
+				margin-top: 80px;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+
+				.cards {
+					width: 100%;
+					height: 900px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					width: 100%;
+					position: relative;
+
+					.first {
+						width: 100%;
+						height: 50%;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+						margin-bottom: 50px;
+
+						.card1 {
+							width: 500px;
+							height: 400px;
+							transition: 1s;
+							opacity: 0;
+							position: relative;
+							bottom: -100px;
+
+							&:hover {
+								transform: scale(1.05);
+							}
+
+							&.on {
+								opacity: 1;
+								bottom: 0;
+							}
+
+							a {
+								width: 100%;
+								height: 100%;
+								display: flex;
+								flex-direction: column;
+
+								img {
+									width: 100%;
+									height: 80%;
+									border-radius: 10px;
+									object-fit: cover;
+								}
+
+								h1 {
+									margin-top: 10px;
+									font: bold 25px/1 "nanum gothic";
+									color: #333;
+								}
+
+								.ptext {
+									display: flex;
+									justify-content: space-between;
+
+									p {
+										color: #777;
+										letter-spacing: 2px;
+										margin-top: 10px;
+									}
+
+									.more1 {
+										display: flex;
+										align-items: center;
+										transition: 0.5s;
+										opacity: 0;
+
+
+										span {
+											width: 30px;
+											height: 2px;
+											transform: translateY(320%);
+											background-color: red;
+
+											&::after {
+												content: "";
+												display: block;
+												width: 6px;
+												height: 6px;
+												border-radius: 50%;
+												background-color: red;
+												transform-origin: right;
+												position: absolute;
+												right: 0;
+												top: -2px;
+											}
+										}
+
+										&:hover {
+											opacity: 1;
+										}
+									}
+								}
+							}
+						}
+
+						.card2 {
+							width: 500px;
+							height: 400px;
+							transition: 1s;
+							opacity: 0;
+							position: relative;
+							bottom: -100px;
+
+							&:hover {
+								transform: scale(1.05);
+							}
+
+							&.on {
+								bottom: 0;
+								opacity: 1;
+							}
+
+							a {
+								width: 100%;
+								height: 100%;
+								display: flex;
+								flex-direction: column;
+
+								img {
+									width: 100%;
+									height: 80%;
+									border-radius: 10px;
+									object-fit: cover;
+								}
+
+								h1 {
+									margin-top: 10px;
+									font: bold 25px/1 "nanum gothic";
+									color: #333;
+								}
+
+								.ptext {
+									display: flex;
+									justify-content: space-between;
+
+									p {
+										color: #777;
+										letter-spacing: 2px;
+										margin-top: 10px;
+									}
+
+									.more2 {
+										display: flex;
+										align-items: center;
+										transition: 0.5s;
+										opacity: 0;
+
+
+										span {
+											width: 30px;
+											height: 2px;
+											transform: translateY(320%);
+											background-color: rgb(255, 58, 58);
+
+											&::after {
+												content: "";
+												display: block;
+												width: 6px;
+												height: 6px;
+												border-radius: 50%;
+												background-color: rgb(255, 58, 58);
+												transform-origin: right;
+												position: absolute;
+												right: 0;
+												top: -2px;
+											}
+										}
+
+										&:hover {
+											opacity: 1;
+										}
+									}
+								}
+							}
+						}
+
+						.card3 {
+							width: 500px;
+							height: 400px;
+							transition: 1s;
+							opacity: 0;
+							position: relative;
+							bottom: -100px;
+
+							&:hover {
+								transform: scale(1.05);
+							}
+
+							&.on {
+								bottom: 0;
+								opacity: 1;
+							}
+
+							a {
+								width: 100%;
+								height: 100%;
+								display: flex;
+								flex-direction: column;
+
+								img {
+									width: 100%;
+									height: 80%;
+									border-radius: 10px;
+									object-fit: cover;
+								}
+
+								h1 {
+									margin-top: 10px;
+									font: bold 25px/1 "nanum gothic";
+									color: #333;
+								}
+
+								.ptext {
+									display: flex;
+									justify-content: space-between;
+
+									p {
+										color: #777;
+										letter-spacing: 2px;
+										margin-top: 10px;
+									}
+
+									.more3 {
+										display: flex;
+										align-items: center;
+										transition: 0.5s;
+										opacity: 0;
+
+
+										span {
+											width: 30px;
+											height: 2px;
+											transform: translateY(320%);
+											background-color: rgb(255, 58, 58);
+
+											&::after {
+												content: "";
+												display: block;
+												width: 6px;
+												height: 6px;
+												border-radius: 50%;
+												background-color: rgb(255, 58, 58);
+												transform-origin: right;
+												position: absolute;
+												right: 0;
+												top: -2px;
+											}
+										}
+
+										&:hover {
+											opacity: 1;
+										}
+									}
+								}
+							}
+						}
+
+					}
+
+					.second {
+						width: 100%;
+						height: 50%;
+						display: flex;
+						justify-content: space-around;
+
+						.card4 {
+							width: 500px;
+							height: 400px;
+							transition: 1s;
+							opacity: 0;
+							position: relative;
+							bottom: -100px;
+
+							&:hover {
+								transform: scale(1.05);
+							}
+
+							&.on {
+								bottom: 0;
+								opacity: 1;
+							}
+
+							a {
+								width: 100%;
+								height: 100%;
+								display: flex;
+								flex-direction: column;
+
+								img {
+									width: 100%;
+									height: 80%;
+									border-radius: 10px;
+									object-fit: cover;
+								}
+
+								h1 {
+									margin-top: 10px;
+									font: bold 25px/1 "nanum gothic";
+									color: #333;
+								}
+
+								.ptext {
+									display: flex;
+									justify-content: space-between;
+
+									p {
+										color: #777;
+										letter-spacing: 2px;
+										margin-top: 10px;
+									}
+
+									.more4 {
+										display: flex;
+										align-items: center;
+										transition: 0.5s;
+										opacity: 0;
+
+
+										span {
+											width: 30px;
+											height: 2px;
+											transform: translateY(320%);
+											background-color: rgb(255, 58, 58);
+
+											&::after {
+												content: "";
+												display: block;
+												width: 6px;
+												height: 6px;
+												border-radius: 50%;
+												background-color: rgb(255, 58, 58);
+												transform-origin: right;
+												position: absolute;
+												right: 0;
+												top: -2px;
+											}
+										}
+
+										&:hover {
+											opacity: 1;
+										}
+									}
+								}
+							}
+						}
+
+						.card5 {
+							width: 1150px;
+							height: 100%;
+							position: relative;
+							left: 150px;
+							opacity: 0;
+							display: flex;
+							transition: 1s;
+
+							&:hover {
+								transform: scale(1.05);
+							}
+
+							&.on {
+								opacity: 1;
+								left: 60px;
+							}
+
+							.cardimage {
+
+								img {
+									width: 100%;
+									height: 100%;
+									text-align: center;
+									object-fit: cover;
+								}
+							}
+
+							.cardtext {
+								width: 60%;
+								display: flex;
+								flex-direction: column;
+								align-items: center;
+								justify-content: center;
+
+								h1 {
+									font: bold 25px/1.5 "nanum gothic";
+									color: #333;
+								}
+
+								.ptext {
+									margin-top: 45px;
+									display: flex;
+									justify-content: space-between;
+									width: 60%;
+
+									p {
+										color: #777;
+										letter-spacing: 2px;
+										margin-top: 10px;
+									}
+
+									.more5 {
+										display: flex;
+										align-items: center;
+										transition: 0.5s;
+										opacity: 0;
+
+
+										span {
+											width: 30px;
+											height: 2px;
+											transform: translateY(320%);
+											background-color: rgb(255, 58, 58);
+
+											&::after {
+												content: "";
+												display: block;
+												width: 6px;
+												height: 6px;
+												border-radius: 50%;
+												background-color: rgb(255, 58, 58);
+												transform-origin: right;
+												position: absolute;
+												right: 0;
+												top: -2px;
+											}
+										}
+
+										&:hover {
+											opacity: 1;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		// 농심소식 영역end//
+
+		// 농심 영역//
+		.brand {
+			width: 100%;
+			margin-top: 100px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			box-sizing: border-box;
+			text-align: center;
+
+			.brandh {
+				font: bold 70px/1.3 "nanum gothic";
+				color: #000;
+				opacity: 0;
+				position: relative;
+				bottom: -200px;
+				transition: 1s;
+
+				&.on {
+					opacity: 1;
+					bottom: -100px;
+				}
+			}
+
+			.cardlogo {
+				margin-top: 300px;
+				margin-left: 0;
+				opacity: 0;
+				transition: 1s;
+				z-index: 2;
+				position: absolute;
+
+				&.on {
+					opacity: 1;
+				}
+
+				.logo {
+					backface-visibility: hidden;
+					perspective: 600px;
+				}
+
+				.logo.front,
+				.logo.back {
+					width: 600px;
+					height: 600px;
+					transition: 1s;
+				}
+
+				.logo.front {
+					transform: rotateY(0deg);
+					position: absolute;
+				}
+
+				.logo.back {
+					text-align: center;
+					transform: rotateY(-180deg);
+
+					.backtext {
+						width: 70%;
+						position: absolute;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						left: 50%;
+						transform: translateX(-50%);
+						bottom: -50px;
+						z-index: 2;
+						font: bold 25px/1.7 "nanum gothic";
+						color: #fff;
+
+						a {
+							display: block;
+							width: 250px;
+							height: 70px;
+							border-radius: 40px;
+							line-height: 70px;
+							color: rgb(218, 42, 42);
+							border: 2px solid rgb(218, 42, 42);
+							;
+							transition: 0.5s;
+
+							&:hover {
+								color: #fff;
+								background-color: rgb(218, 42, 42);
+							}
+						}
+					}
+				}
+
+				&:hover .logo.front {
+					transform: rotateY(180deg);
+				}
+
+				&:hover .logo.back {
+					transform: rotateY(0deg);
+				}
+			}
+
+			.boxim {
+				width: 100%;
+				height: 1000px;
+				margin-top: 300px;
+				display: flex;
+				justify-content: center;
+				background-image: url(/img/main_visual.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				position: relative;
+
+				.brandst {
+					width: 180px;
+					height: 130px;
+					background: linear-gradient(to bottom right, rgb(218, 42, 42), red);
+					position: absolute;
+					left: -180px;
+					top: -65px;
+					opacity: 0;
+					transition: 1s;
+
+					&.on {
+						left: -1px;
+						opacity: 0.8;
+					}
+				}
+
+				.brandbox {
+					width: 90%;
+					height: 400px;
+					bottom: 0px;
+					display: flex;
+					justify-content: space-between;
+					opacity: 0;
+					transition: 1s;
+					position: absolute;
+
+					&.on {
+						opacity: 1;
+						bottom: 100px;
+					}
+
+					.brandtext {
+						width: 500px;
+						height: 400px;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						text-align: center;
+						border-radius: 10px;
+						background-color: rgba(255, 255, 255, 0.789);
+
+						span {
+							width: 80%;
+							height: 3px;
+							margin-top: 100px;
+							background-color: rgb(218, 42, 42);
+						}
+
+						h1 {
+							margin-top: 50px;
+							font: bold 50px/1 "nanum gothic";
+						}
+
+						p {
+							margin-top: 40px;
+							font: 25px/1.5 "nanum gothic";
+							color: #333;
+						}
+					}
+				}
+			}
+
+		}
+		// 농심 영역end//
+
+		//지속가능경영 영역//
+		.continue {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-items: center;
+			align-items: center;
+			text-align: center;
+
+			.conh {
+				font: bold 70px/1.3 "nanum gothic";
+				color: #000;
+				opacity: 0;
+				position: relative;
+				bottom: -200px;
+				transition: 1s;
+
+				&.on {
+					opacity: 1;
+					bottom: -100px;
+				}
+			}
+
+			.conimg {
+				width: 100%;
+				height: 1000px;
+				margin-top: 300px;
+				background-image: url(/img/conimg.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				position: relative;
+
+				.constt {
+					width: 180px;
+					height: 130px;
+					background: linear-gradient(to bottom right, rgb(255, 132, 0), orange);
+					position: absolute;
+					left: -180px;
+					top: -65px;
+					opacity: 0;
+					transition: 1s;
+
+					&.on {
+						left: -1px;
+						opacity: 0.8;
+					}
+				}
+
+				.conef {
+					width: 1300px;
+					height: 600px;
+					border: 2.5px solid rgb(255, 132, 0);
+					border-radius: 10px;
+					position: absolute;
+					opacity: 0;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%) translateY(-50%);
+					perspective: 800px;
+					transition: 1s;
+
+					&.on {
+						transform: translateX(-50%) translateY(-50%) rotateY(30deg) skewX(-4deg);
+						left: 45%;
+						opacity: 1;
+						background-color: rgba(255, 132, 0, 0);
+						;
+						animation: ani 2s forwards;
+					}
+
+					@keyframes ani {
+						0% {
+							transform: translateX(-50%) translateY(-50%) rotateY(30deg) skewX(-4deg);
+						}
+
+						100% {
+							transform: translateX(-50%) translateY(-50%) rotateY(360deg) skewX(-4deg);
+							left: 45%;
+						}
+					}
+				}
+
+				.context {
+					width: 1300px;
+					height: 500px;
+					padding: 100px;
+					background-color: rgba(255, 255, 255, 0.445);
+					opacity: 0;
+					transition: 1s;
+					position: absolute;
+					top: 50%;
+					left: 45%;
+					box-shadow: 5px 5px 20px rgba(51, 51, 51, 0.492);
+					transform: translateX(-50%) translateY(-50%);
+
+					&.on {
+						left: 50%;
+						opacity: 1;
+					}
+
+					h1 {
+						color: #000;
+						font: bold 40px/1 "arial";
+					}
+
+					p {
+						margin-top: 50px;
+						color: #333;
+						font: 25px/1.8 "nanum gothic";
+					}
+				}
+
+				.context2 {
+					margin-top: 70px;
+					font: bold 25px/1.7 "nanum gothic";
+					text-align: center;
+					color: #fff;
+					position: absolute;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%) translateY(-70%);
+
+					a {
+						display: block;
+						width: 250px;
+						height: 70px;
+						border-radius: 40px;
+						line-height: 70px;
+						color: rgb(218, 42, 42);
+						border: 2px solid rgb(218, 42, 42);
+						;
+						transition: 0.5s;
+
+						&:hover {
+							color: #fff;
+							background-color: rgb(218, 42, 42);
+						}
+					}
+				}
+			}
+		}
+		//지속가능경영 영역 end//
+
+		//브랜드 영역//
+		.prodect {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+
+			.proh {
+				font: bold 70px/1.3 "nanum gothic";
+				color: #000;
+				opacity: 0;
+				position: absolute;
+				top: 250px;
+				transition: 1s;
+
+				&.on {
+					opacity: 1;
+					top: 150px;
+				}
+			}
+
+			.proim {
+				width: 100%;
+				height: 1000px;
+				margin-top: 400px;
+				background-image: url(/img/main_brand.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				position: relative;
+
+				h1 {
+					position: absolute;
+					left: 0;
+					top: 50%;
+					color: #fff;
+					font: bold 100px/1 "arial";
+					opacity: 0;
+					transition: 1s;
+
+					&.on {
+						opacity: 1;
+						left: 50px;
+					}
+				}
+
+				.prost {
+					width: 180px;
+					height: 130px;
+					background: linear-gradient(to bottom right, green, rgb(14, 199, 14));
+					position: absolute;
+					left: -180px;
+					top: -65px;
+					opacity: 0;
+					transition: 1s;
+
+					&.on {
+						left: -1px;
+						opacity: 0.8;
+					}
+				}
+			}
+
+			.pro {
+				width: 100%;
+				display: flex;
+				justify-content: space-around;
+
+				a {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+
+					span {
+						width: 80%;
+						height: 2px;
+						margin-top: 100px;
+						background-color: rgb(218, 42, 42);
+					}
+
+					h2 {
+						margin-top: 20px;
+						color: #333;
+					}
+
+					img {
+						margin-top: 20px;
+						width: 350px;
+						border: 1px solid rgb(218, 42, 42);
+						border-radius: 50%;
+						object-fit: cover;
+					}
+
+					p {
+						margin-top: 20px;
+						font: bold 20px/1.5 "nanum gothic";
+						color: #333;
+					}
+
+					&:nth-of-type(2) {
+
+						span {
+							background-color: rgb(255, 132, 0);
+						}
+
+						img {
+							border: 1px solid rgb(255, 132, 0);
+						}
+					}
+
+					&:nth-of-type(3) {
+						span {
+							background-color: rgb(14, 199, 14);
+						}
+
+						img {
+							border: 1px solid rgb(14, 199, 14);
+						}
+					}
+
+					&:nth-of-type(4) {
+						span {
+							background-color: rgb(33, 60, 236);
+						}
+
+						img {
+							border: 1px solid rgb(33, 60, 236);
+						}
+					}
+				}
+
+			}
+
+			.protext {
+				margin-top: 70px;
+				font: bold 25px/1.7 "nanum gothic";
+				text-align: center;
+				color: #fff;
+
+				a {
+					display: block;
+					width: 250px;
+					height: 70px;
+					border-radius: 40px;
+					line-height: 70px;
+					color: rgb(218, 42, 42);
+					border: 2px solid rgb(218, 42, 42);
+					;
+					transition: 0.5s;
+
+					&:hover {
+						color: #fff;
+						background-color: rgb(218, 42, 42);
+					}
+				}
+			}
+		}
+		//브랜드 영역 end//
+
+		//누들푸들 영역//
+		.noodle {
+			width: 100%;
+			padding: 150px 0;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.nootext {
+				position: absolute;
+				top: 30%;
+				left: 10%;
+				transition: 1s;
+
+				p {
+					font: 100px/1.5 "Gugi";
+					transform: translateX(-50%);
+					transition: 1s;
+					opacity: 0;
+				}
+
+				.p1.on {
+					transform: translateX(0);
+					opacity: 1;
+				}
+
+				.p2.on {
+					transform: translateX(13%);
+					opacity: 1;
+				}
+
+				.p3.on {
+					transform: translateX(20%);
+					opacity: 1;
+				}
+			}
+
+			.nooimg {
+				width: 90%;
+				height: 800px;
+				display: flex;
+				opacity: 0;
+				transition: 1s;
+				box-sizing: border-box;
+
+				.left {
+					width: 40%;
+					height: inherit;
+
+					.lefttext {
+						width: 100%;
+						height: 50%;
+						transition: 1s;
+						transform: translateX(-20%) translateY(-20%);
+						padding: 50px;
+						background-image: url(/img/noodle.jpg);
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: cover;
+						color: #fff;
+						cursor: pointer;
+
+						&.on {
+							transform: translateX(0%) translateY(0%);
+						}
+
+						h1 {
+							font: bold 50px/2 "Nanum Pen Script";
+						}
+
+						p {
+							font: 40px/1.3 "Nanum Pen Script";
+							letter-spacing: 5px;
+						}
+
+						a {
+							display: block;
+							width: 40%;
+							height: 40px;
+							border: 1px solid #fff;
+							border-radius: 15px;
+							text-align: center;
+							font: 25px/1 "arial";
+							line-height: 40px;
+							margin-top: 50px;
+							color: #fff;
+							transition: .5s;
+
+							&:hover {
+								background-color: #fff;
+								color: #333;
+							}
+						}
+					}
+
+					.leftimg {
+						width: 100%;
+						height: 50%;
+						position: relative;
+						background-image: url(/img/noodle2.jpg);
+						background-position: bottom;
+						background-repeat: no-repeat;
+						background-size: cover;
+						transform: translateX(-20%) translateY(20%);
+						transition: 1s;
+						cursor: pointer;
+
+						&.on {
+							transform: translateX(0%) translateY(0%);
+						}
+
+						p {
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							padding-top: 25px;
+							display: block;
+							width: 60%;
+							height: 80px;
+							background-color: rgba(255, 255, 255, 0.6);
+							text-align: center;
+							font: bold 36px/1 "Gamja Flower";
+							color: #333;
+						}
+					}
+				}
+
+				.right {
+					width: 60%;
+					height: inherit;
+					position: relative;
+					background-image: url(/img/noodle3.jpg);
+					background-position: right;
+					background-repeat: no-repeat;
+					background-size: cover;
+					transform: translateX(20%) scale(1.2);
+					transition: 1s;
+					cursor: pointer;
+
+					&.on {
+						transform: translateX(00%) scale(1);
+					}
+
+					.righttext {
+						width: 60%;
+						height: 500px;
+						padding: 100px;
+						position: absolute;
+						right: 0;
+						top: 50%;
+						transform: translateY(-50%);
+						background-color: rgba(255, 255, 255, 0.6);
+
+						h1 {
+							display: block;
+							width: 100%;
+							height: 50px;
+							padding-top: 20px;
+							font: bold 50px/1 "Gowun Batang";
+						}
+
+						p {
+							margin-top: 40px;
+							font: 30px/1.3 "Gowun Batang";
+						}
+
+						span {
+							display: block;
+							text-align: center;
+							width: 200px;
+							margin-top: 50px;
+							border: 1px solid #333;
+							border-radius: 10px;
+							font: bold 20px "Gowun Batang";
+						}
+					}
+				}
+			}
+
+			.noodlea {
+				position: absolute;
+				bottom: 0;
+				text-align: center;
+				font: bold 25px/1.7 "nanum gothic";
+
+				a {
+					display: block;
+					width: 250px;
+					height: 70px;
+					border-radius: 40px;
+					line-height: 70px;
+					color: rgb(218, 42, 42);
+					border: 2px solid rgb(218, 42, 42);
+					;
+					transition: 0.5s;
+
+					&:hover {
+						color: #fff;
+						background-color: rgb(218, 42, 42);
+					}
+				}
+			}
+		}
+		//누들푸들 영역 end//
+
+		//농심채용 영역//
+		.rec {
+			width: 100%;
+			height: 700px;
+			margin-top: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+
+			.recst {
+				width: 180px;
+				height: 130px;
+				background: linear-gradient(to bottom right, #333, #222);
+				position: absolute;
+				left: -180px;
+				top: -65px;
+				opacity: 0;
+				transition: 1s;
+
+				&.on {
+					left: -1px;
+					opacity: 0.8;
+				}
+			}
+
+			.recimg {
+				width: 70%;
+				height: inherit;
+				background-image: url(/img/Nongshim_HQ_s.jpg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.rectext {
+				width: 30%;
+				height: inherit;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				padding: 100px 50px;
+
+				h1 {
+					text-align: left;
+					font: bold 60px/1 "arial";
+				}
+
+				p {
+					margin-top: 50px;
+					font:bold 25px/1.5 "nanum gothic";
+				}
+
+				a {
+					margin-top: 150px;
+					padding-top: 13px;
+					display: block;
+					width: 250px;
+					height: 70px;
+					border-radius: 40px;
+					line-height: 70px;
+					color: #fff;
+					border: 2px solid #Fff;
+					;
+					transition: 0.5s;
+					font: bold 25px/1.7 "nanum gothic";
+
+					&:hover {
+						color: #333;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+		//농심채용 영역 end//
+	}
+	//섹션영역 end//
+
+	//푸터영역//
+	footer {
+		width: 100%;
+		height: 300px;
+		display: flex;
+		align-items: center;
+
+		background-color: #222;
+
+		.ftlogo {
+			width: 10%;
+			margin: 0 50px 0 70px;
+
+			.footerlogo {
+				width: 100%;
+				height: 200px;
+				background-image: url(/img/농심로고3.png);
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+
+		.footertext {
+			width: 55%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.overtext {
+				width: 100%;
+				display: flex;
+
+				li {
+					font: 20px/1 "arial";
+					margin-right: 30px;
+
+					a {
+						color: rgb(133, 133, 133);
+					}
+				}
+			}
+
+			.undertext {
+				margin-top: 20px;
+				width: 100%;
+				display: flex;
+
+				li {
+					font: 20px/1 "arial";
+					margin-right: 20px;
+
+					a {
+						color: rgb(133, 133, 133);
+					}
+				}
+			}
+
+			.lasttext {
+				margin-top: 20px;
+				width: 100%;
+				display: flex;
+
+				li {
+					font: 20px/1 "arial";
+					margin-right: 20px;
+
+					a {
+						color: #fff;
+					}
+				}
+			}
+
+			p {
+				margin-top: 50px;
+				color: #fff
+			}
+		}
+
+
+		.footersns {
+			width: 15%;
+			height: 200px;
+			margin-left: 100px;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			i {
+				color: rgb(133, 133, 133);
+				font-size: 30px;
+			}
+		}
+	}
+	//푸터영역 end//
+}
